@@ -19,7 +19,7 @@ return {
     -- Insert the custom lualine component
     table.insert(sections.lualine_c, 2, {
       function()
-        local icon = require("mini.icons").get("directory", "home")
+        local icon = require("mini.icons").get("os", "macos")
         return icon .. " " .. tail_cwd
       end,
       color = function()
