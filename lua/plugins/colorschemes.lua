@@ -4,7 +4,7 @@ return {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
-      vim.g.neovide_theme = "light"
+      vim.g.neovide_theme = "auto"
       require("gruvbox").setup({
         contrast = "soft",
       })
