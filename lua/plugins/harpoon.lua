@@ -23,6 +23,11 @@ return {
         "<leader>H",
         function()
           require("harpoon"):list():add()
+          local filename = vim.fn.expand("%:t")
+          vim.api.nvim_echo({
+            { "Harpooned the shit out of ", "None" },
+            { filename, "Title" }, -- Title is often bold in most color schemes
+          }, false, {})
         end,
         desc = "Harpoon File",
       },

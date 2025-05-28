@@ -20,3 +20,10 @@ vim.api.nvim_create_autocmd("TermEnter", {
   end,
 })
 
+-- Set `q` to close Diffview, only in Diffview buffers
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "DiffviewFiles", "DiffviewFileHistory", "DiffviewView" },
+      callback = function(args)
+        vim.keymap.set("n", "q", "<cmd>q<cr>", { buffer = args.buf, silent = true })
+      end,
+    })
