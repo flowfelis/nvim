@@ -11,7 +11,7 @@ return {
         html = { "prettier" },
         css = { "prettier" },
         scss = { "prettier" },
-        python = { "isort" },
+        python = {"pylsp", "isort" },
       },
       formatters = {
         djlint = {
